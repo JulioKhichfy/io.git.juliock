@@ -10,7 +10,7 @@
     <artifactId>vendas</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- init 1*: Adicionar o parent e dependency: como se fosse um template -->
+    <!-- Adicionar o parent e dependency: como se fosse um template -->
     <!-- parent = biblioteca que vai configurar automaticamente toda a aplicação springboot-->
     <!-- acessar: mvnrepository.com e pesquisar: spring boot starter parent -->
 
@@ -22,20 +22,37 @@
     </parent>
 
     <dependencies>
-        <!-- starter core do springboot, traz as funcionalidades básicas-->
+        <!-- starter core: do springboot, traz as funcionalidades básicas-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
             <!-- não precisa pois ja herda do parent <version>2.2.4.RELEASE</version> -->
         </dependency>
-        <!-- end 1* -->
 
-        <!-- init 2*: configura o módulo web trazendo as dependências: exemplo @RestController -->
+        <!-- starter web: configura o módulo web trazendo as dependências: exemplo @RestController -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- end 1* -->
+
+        <!-- starter data
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>-->
+
+        <!-- starter security
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>-->
+
+        <!-- starter test
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>-->
+
     </dependencies>
 
     <build>
