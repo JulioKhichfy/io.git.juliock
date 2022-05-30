@@ -1,4 +1,4 @@
-###### create a new repository on the command line
+####0 create a new repository on the command line
 ```
 https://github.com/JulioKhichfy/io.git.juliock.git
 Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
@@ -22,7 +22,7 @@ git branch -M main
 git push -u origin main
 ```
 
-###### Starters: Como funciona a mágica por trás do Spring Boot
+####1 Starters: Como funciona a mágica por trás do Spring Boot
 Bastou incluir as anotações @SpringBootApplication e @RestController que possibilitou 
 acessar pelo browser http://localhost:8080/hello
 
@@ -53,8 +53,7 @@ Sem ele não temos @SpringBootApplication
 </dependency>
 ```
 
-###### 3 - Principais Starters
-
+####2 - Principais Starters
 1 starter web: Módulo adicionado para desenvolver Rest
 ```
 <dependency>
@@ -86,3 +85,11 @@ Sem ele não temos @SpringBootApplication
     <artifactId>spring-boot-starter-test</artifactId>
 </dependency>
 ```
+
+####3 - Configurations e Beans
+Como vimos, os starters são auto-configuráveis e já vem prontos para o uso.
+
+P: Como customizar ou fazer alguma configuração?
+
+R: Configurations e Beans  
+
