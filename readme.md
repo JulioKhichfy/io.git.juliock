@@ -91,5 +91,26 @@ Como vimos, os starters são auto-configuráveis e já vem prontos para o uso.
 
 P: Como customizar ou fazer alguma configuração?
 
-R: Configurations e Beans  
+R: Configurations e Beans
+
+####4 - Spring framework: Container IOC
+Para ser controlado pelo spring (singleton)
+Passa a integrar no contexto/deixa disponivel no container
+```
+                                  CONTEXTO
+                                Container IOC
+                                    /\
+                                    ||
+              -----------------------------------------------
+              /\                                           /\ 
+              ||                                           ||
+        @Configuration                                  @Component
+              /\                                            /\
+              ||                                            ||
+              ||                                            ||
+            @Bean                             ---------------------------------
+                                                /\            /\           /\
+                                                ||            ||           || 
+                                             @Controler   @Repository   @Service                                                         
+```                             
 

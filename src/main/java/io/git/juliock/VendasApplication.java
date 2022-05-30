@@ -1,15 +1,26 @@
+//Todos os pacotes daqui pra frente passam a ser gerenciados/scaneados
+//ou utilizar @ComponentScan(...).
+// Por padrão tudo passa a ser gerenciado a patir desse pacote
 package io.git.juliock;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 //Adicionar a anotação @SpringBootApplication: reconhece que essa classe
 //irá inicializar uma aplicação springboot
 @SpringBootApplication
+
+@ComponentScan(
+        basePackages = {
+        "io.git.juliock.repository",
+        "io.git.juliock.service",
+        "com.umaoutrabiblioteca.projeto" // esse precisa, os outros já estao scaneados por padrão
+    })
 
 //Basicamente informo que essa classe será um controlador rest
 //podemos mandar mensagens do browser através dessa classe
